@@ -20,3 +20,5 @@ app.use('/graphql', graphqlHTTP({
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+// 'mongodb+srv://graphql123:graphql123@mern-graphql.1a2qxw0.mongodb.net/management_db?retryWrites=true&w=majority'
