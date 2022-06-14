@@ -103,9 +103,9 @@ const Mutation = new GraphQLObjectType({
           type: new GraphQLEnumType({
             name: 'ProjectStatus',
             values: {
-              'NotStarted': { value: 'Not Started' },
-              'InProgress': { value: 'In Progress' },
-              'Completed': { value: 'Completed' }
+              'new': { value: 'Not Started' },
+              'progress': { value: 'In Progress' },
+              'completed': { value: 'Completed' }
             }
           }),
           defaultValue: 'Not Started'
@@ -143,9 +143,9 @@ const Mutation = new GraphQLObjectType({
           type: new GraphQLEnumType({
             name: 'ProjectStatusUpdate',
             values: {
-              'NotStarted': { value: 'Not Started' },
-              'InProgress': { value: 'In Progress' },
-              'Completed': { value: 'Completed' }
+              'new': { value: 'Not Started' },
+              'progress': { value: 'In Progress' },
+              'completed': { value: 'Completed' }
             }
           }),
         },

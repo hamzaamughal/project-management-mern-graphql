@@ -4,11 +4,14 @@ require('dotenv').config();
 const { graphqlHTTP } = require('express-graphql');
 const colors = require('colors');
 const connectDB = require('./config/db');
+const morgan = require('morgan');
 
 const schema = require('./schema/schema');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
+
+app.use(morgan('dev'));
 
 app.use(cors());
 
@@ -17,11 +20,11 @@ connectDB();
 
 app.use('/graphql', graphqlHTTP({
   schema,
-  graphiql: process.env.NODE_ENV === 'development'
+  graphiql: true
 }));
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(5000, () => {
+  console.log(`Server running on http://localhost:${5000}`);
 });
 
 // 'mongodb+srv://graphql123:graphql123@mern-graphql.1a2qxw0.mongodb.net/management_db?retryWrites=true&w=majority'
